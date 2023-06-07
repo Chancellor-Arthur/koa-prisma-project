@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "pretty": true,
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "strictNullChecks": true,
+        "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+        "esModuleInterop": true,
+        "allowJs": true,
+        "strictPropertyInitialization": false,
+        "skipLibCheck": true,
+        "strict": true,
+        "noImplicitAny": false,
+        "resolveJsonModule": true,
+        "baseUrl": "./",
+        "outDir": "build",
+        "types": ["@types/node"],
+        "noEmitOnError": true,
+    },
+    "include": ["./**/*.ts", "./**/*.js"],
+    "exclude": ["node_modules", "build"]
+}

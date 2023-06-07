@@ -1,0 +1,58 @@
+{
+  "name": "koa-prisma-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "env-cmd tsx watch src/index",
+    "build": "tsc",
+    "start": "cd ./build && node .",
+    "db:migrate:dev": "npx prisma migrate dev",
+    "db:migrate": "npx prisma migrate deploy",
+    "generate-types": "npx prisma generate",
+    "pull-scheme": "npx env-cmd prisma db pull",
+    "push-scheme": "npx env-cmd prisma db push",
+    "eslint:fix": "eslint --ext .ts  --fix",
+    "prettier:fix": "prettier --write ./src/**/*.ts"
+  },
+  "prisma": {
+    "schema": "./src/prisma/schema.prisma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chancellor-Arthur/koa-prisma-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chancellor-Arthur/koa-prisma-project/issues"
+  },
+  "homepage": "https://github.com/Chancellor-Arthur/koa-prisma-project#readme",
+  "devDependencies": {
+    "@types/koa": "2.13.5",
+    "@types/koa__cors": "^4.0.0",
+    "@types/koa__router": "^12.0.0",
+    "@types/koa-bodyparser": "4.3.7",
+    "@types/koa-logger": "^3.1.2",
+    "eslint": "^8.42.0",
+    "prettier": "^2.8.8",
+    "prisma": "^4.12.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "@koa/router": "^12.0.0",
+    "@prisma/client": "^4.12.0",
+    "arktype": "^1.0.14-alpha",
+    "dotenv": "^16.1.4",
+    "env-cmd": "^10.1.0",
+    "find-config": "^1.0.0",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "lodash": "^4.17.21",
+    "tsx": "^3.12.6"
+  }
+}
